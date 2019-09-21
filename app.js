@@ -14,6 +14,10 @@ app.get('/async_await_ES7', function(req, res) {
     res.render('async_await');
 });
 
+app.get('/vuejs', function(req, res) {
+    res.render('vuejs');
+});
+
 app.listen(port, () => {
     console.log(`Servidor online na porta ${port}!`)
 });

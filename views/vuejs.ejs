@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js</title>
+</head>
+<body>
+    <div id="app">
+        <a href="/"><- Return to Home Page</a>
+        <h3 v-show="status">{{ titulo }}</h3>
+        <p v-if="status">{{ mensagem }}</p>
+        <p v-else>Texto alternativo</p>    
+        <hr>
+        <h4>Exemplo de objeto:</h4>
+        <div>
+            <ul v-for="item in objeto">
+                <li>ID: {{ item.id }}</li>
+                <li>Nome: {{ item.nome }}</li>
+                <li>Idade: {{ item.idade }}</li>
+            </ul>
+        </div>
+        <br>
+        <hr>
+    </div>
+    
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                status: true,
+                titulo: "Page with Examples of Vue.js",
+                mensagem: "Example of text!",
+                objeto: [ 
+                    { id: 0, nome: "Fulano", idade: 23 },
+                    { id: 1, nome: "Ciclano", idade: 21 },
+                ]
+            }
+        });
+    </script>
+    
+</body>
+</html>
